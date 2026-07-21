@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeferson & Vanessa — 9 Anos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Tela Inicial / Capa Romântica -->
+  <div id="capa-inicial">
+    <div class="capa-conteudo">
+      <h1>Jeferson <span class="e">&</span> Vanessa</h1>
+      <p class="sub-hero">9 anos de uma história inesquecível</p>
+      <div class="linha-dourada"></div>
+      <button id="btn-entrar">Nossa História ❤</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal do Site -->
+  <div id="conteudo-site" class="oculto">
+    <section class="hero visivel">
+      <h1>Jeferson <span class="e">&</span> Vanessa</h1>
+      <p class="sub-hero">Nossa história em cada detalhe</p>
+      <div class="linha-dourada"></div>
+      <div id="contador">
+        <strong id="dias">—</strong>
+        dias juntos, 9 anos de história
+      </div>
+    </section>
+
+    <section class="musica">
+      <div class="play-aviso">▶ Nossa Trilha Sonora</div>
+      <iframe src="https://open.spotify.com/embed/track/0tgVpDi06FyKpA1z0VMD4v" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <!-- Blocos de Anos -->
+    <section>
+      <h2 class="ano-titulo">2017</h2>
+      <p class="ano-texto">Tudo começou. Duas pessoas e uma história que ainda não sabíamos até onde iria.</p>
+      <div class="galeria" id="galeria-2017"></div>
+    </section>
+
+    <section>
+      <h2 class="ano-titulo">2018 – 2019</h2>
+      <p class="ano-texto">Os primeiros anos: descobrindo um ao outro e aprendendo a dividir a vida.</p>
+      <div class="galeria" id="galeria-2018"></div>
+      <div class="galeria" id="galeria-2019" style="margin-top: 10px;"></div>
+    </section>
+
+    <section>
+      <h2 class="ano-titulo">2020 – 2021</h2>
+      <p class="ano-texto">Os dias bons e os dias difíceis: porque a nossa história nunca foi feita apenas de momentos perfeitos.</p>
+      <div class="galeria" id="galeria-2020"></div>
+      <div class="galeria" id="galeria-2021" style="margin-top: 10px;"></div>
+    </section>
+
+    <section>
+      <h2 class="ano-titulo">2022 – 2024</h2>
+      <p class="ano-texto">Tudo o que vivemos: cada fase deixou uma lembrança, uma marca e uma parte da nossa história.</p>
+      <div class="galeria" id="galeria-2022"></div>
+      <div class="galeria" id="galeria-2023" style="margin-top: 10px;"></div>
+      <div class="galeria" id="galeria-2024" style="margin-top: 10px;"></div>
+    </section>
+
+    <section>
+      <h2 class="ano-titulo">2025 – 2026</h2>
+      <p class="ano-texto">Hoje, 9 anos depois: aqui estamos nós, olhando para trás e lembrando de tudo que vivemos.</p>
+      <div class="galeria" id="galeria-2025"></div>
+      <div class="galeria" id="galeria-2026" style="margin-top: 10px;"></div>
+    </section>
+
+    <section>
+      <div class="carta">
+        <p>Vida,</p>
+        <p>Hoje completamos 9 anos juntos.</p>
+        <p>Quando penso em tudo que vivemos, não consigo resumir a nossa história apenas em momentos felizes. A nossa história é feita de tudo: dos dias bons, dos dias difíceis, das escolhas, das preocupações, das risadas, das discussões, dos recomeços e de todas as vezes em que, de alguma forma, continuamos seguindo.</p>
+        <p>Nove anos é muito tempo. É tempo suficiente para mudar, aprender, amadurecer e conhecer profundamente a pessoa que está ao nosso lado. E, olhando para trás, eu vejo que nós dois mudamos muito desde o começo. Mas também vejo quantas coisas vivemos juntos e quantas lembranças fazem parte da nossa história.</p>
+        <p>Nem sempre foi fácil. Nem sempre acertamos. Nem sempre conseguimos dizer o que sentíamos da melhor forma. Mas, apesar de tudo, existe algo que ninguém pode apagar: nós vivemos uma história juntos.</p>
+        <p>E hoje, olhando para todas essas fotos, eu percebo que cada momento, até mesmo aqueles que pareciam pequenos na época, ajudou a construir quem nós somos hoje.</p>
+        <p>Obrigado por esses 9 anos. Por tudo que vivemos, por tudo que aprendemos e por fazer parte da minha vida de uma forma que só você poderia fazer.</p>
+      </div>
+
+      <!-- Botão de Surpresa Secreta -->
+      <div class="container-surpresa">
+        <button id="btn-surpresa">💌 Uma última coisinha...</button>
+        <div id="mensagem-secreta" class="oculto">
+          <p>Que este seja apenas o começo dos próximos capítulos da nossa vida. Te amo hoje, amanhã e sempre!</p>
+        </div>
+      </div>
+
+      <div class="assinatura">Feliz 9 anos para nós ❤️</div>
+    </section>
+
+    <footer>Jeferson & Vanessa · desde 22/07/2017</footer>
+  </div>
+
+  <!-- Janela Modal (Lightbox) para Ampliar as Fotos -->
+  <div id="lightbox" class="oculto">
+    <span id="lightbox-fechar">&times;</span>
+    <img id="lightbox-img" src="" alt="Foto Ampliada">
+    <div id="lightbox-legenda"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
