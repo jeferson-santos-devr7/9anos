@@ -47,15 +47,15 @@ function carregarFotosAno(ano, listaDeArquivos) {
   }
 }
 
-// Inserção das fotos correspondentes às pastas com extensões .jpg padronizadas
+// Inserção das fotos correspondentes exatamente aos arquivos existentes
 carregarFotosAno(2017, ['1700.jpg', '1701.jpg', '1702.jpg', '1703.jpg']);
 carregarFotosAno(2018, ['1800.jpg', '1801.jpg', '1802.jpg', '1803.jpg']);
-carregarFotosAno(2019, ['1900.jpg', '1901.jpg', '1902.jpg', '1903.jpg', '201900.jpg', '201901.jpg', '201902.jpg', '201903.jpg']);
-carregarFotosAno(2020, ['2000.jpg', '2001.jpg', '2002.jpg', '2003.jpg']);
-carregarFotosAno(2021, ['2100.jpg', '2101.jpg', '2102.jpg', '2103.jpg']);
+carregarFotosAno(2019, ['1900.jpg', '1901.jpg', '1902.jpg', '1903.jpg']);
+carregarFotosAno(2020, ['2000.jpg', '2001.jpg', '2002.jpg']);
+carregarFotosAno(2021, ['2100.jpg', '2102.jpg', '2103.jpg']);
 carregarFotosAno(2022, ['2200.jpg', '2201.jpg', '2202.jpg', '2203.jpg']);
-carregarFotosAno(2023, ['2300.jpg', '2301.jpg', '2302.jpg', '2303.jpg']);
-carregarFotosAno(2024, ['2400.jpg', '2401.jpg', '2402.jpg', '2403.jpg']);
+carregarFotosAno(2023, ['2300.jpg', '2301.jpg', '2302.jpg']);
+carregarFotosAno(2024, ['2400.jpg', '2401.jpg', '2402.jpg']);
 carregarFotosAno(2025, ['2500.jpg', '2502.jpg', '2503.jpg']);
 carregarFotosAno(2026, ['2600.jpg', '2601.jpg', '2602.jpg']);
 
