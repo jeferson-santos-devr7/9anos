@@ -50,7 +50,7 @@ function carregarFotosAno(ano, listaDeArquivos) {
 // Inserção de todas as fotos correspondentes exatamente a cada pasta
 carregarFotosAno(2017, ['1700.jpg', '1701.jpg', '1702.jpg', '1703.jpg']);
 carregarFotosAno(2018, ['1800.jpg', '1801.jpg', '1802.jpg', '1803.jpg']);
-carregarFotosAno(2019, ['1900.jpg', '1901.jpg', '1902.jpg', '1903.jpg', '201900.jpg', '201901.jpg', '201902.jpg', '201903.jpg']);
+carregarFotosAno(2019, ['201900.jpg', '201901.jpg', '201902.jpg', '201903.jpg']);
 carregarFotosAno(2020, ['2000.jpg', '2001.jpg', '2002.jpg', '2003.jpg']);
 carregarFotosAno(2021, ['2100.jpg', '2101.jpg', '2102.jpg', '2103.jpg']);
 carregarFotosAno(2022, ['2200.jpg', '2201.jpg', '2202.jpg', '2203.jpg']);
