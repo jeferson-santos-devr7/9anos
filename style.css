@@ -197,10 +197,17 @@ section.visivel {
   border: 2px solid rgba(212,175,55,0.4);
   box-shadow: 0 4px 14px rgba(0,0,0,0.4);
   cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.3s ease;
 }
 
-.galeria img:hover {
+.galeria img.foto-visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.galeria img.foto-visivel:hover {
   transform: scale(1.04);
   border-color: var(--dourado);
 }
@@ -314,4 +321,35 @@ footer {
 
 #lightbox-fechar:hover {
   color: var(--dourado);
+}
+
+/* Chuva de coracoes ao clicar na mensagem secreta */
+#chuva-coracoes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.coracao-flutuante {
+  position: absolute;
+  bottom: -40px;
+  font-size: 1.6rem;
+  opacity: 0.9;
+  animation: flutuarCoracao 3.2s ease-in forwards;
+}
+
+@keyframes flutuarCoracao {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--deriva, 0px)) rotate(25deg);
+    opacity: 0;
+  }
 }

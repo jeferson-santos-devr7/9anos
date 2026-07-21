@@ -20,6 +20,16 @@ const legendasPersonalizadas = {
   "2026/2600.jpg": "9 anos depois ❤️"
 };
 
+// Observer de fade-in suave para as fotos das galerias
+const observerFotos = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('foto-visivel');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
 // Função para injetar as imagens de cada pasta de ano dinamicamente com suporte a Lightbox
 function carregarFotosAno(ano, listaDeArquivos) {
   const container = document.getElementById(`galeria-${ano}`);
@@ -43,6 +53,7 @@ function carregarFotosAno(ano, listaDeArquivos) {
       });
 
       container.appendChild(img);
+      observerFotos.observe(img);
     });
   }
 }
@@ -75,7 +86,35 @@ document.getElementById('btn-surpresa').addEventListener('click', function() {
   const mensagem = document.getElementById('mensagem-secreta');
   mensagem.classList.toggle('oculto');
   this.textContent = mensagem.classList.contains('oculto') ? '💌 Uma última coisinha...' : 'Esconder mensagem ✨';
+
+  if (!mensagem.classList.contains('oculto')) {
+    soltarCoracoes();
+  }
 });
+
+// Solta uma chuva de coracoes flutuantes na tela
+function soltarCoracoes() {
+  const container = document.getElementById('chuva-coracoes');
+  if (!container) return;
+
+  const simbolos = ['❤️', '💛', '✨'];
+  const quantidade = 22;
+
+  for (let i = 0; i < quantidade; i++) {
+    setTimeout(() => {
+      const coracao = document.createElement('span');
+      coracao.className = 'coracao-flutuante';
+      coracao.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+      coracao.style.left = `${Math.random() * 100}vw`;
+      coracao.style.setProperty('--deriva', `${(Math.random() * 120 - 60)}px`);
+      coracao.style.fontSize = `${1 + Math.random() * 1.4}rem`;
+      coracao.style.animationDuration = `${2.6 + Math.random() * 1.6}s`;
+
+      container.appendChild(coracao);
+      setTimeout(() => coracao.remove(), 4500);
+    }, i * 90);
+  }
+}
 
 // Efeito de animação suave ao rolar a página (Scroll Reveal)
 const observer = new IntersectionObserver((entries, observer) => {
